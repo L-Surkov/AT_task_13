@@ -103,36 +103,6 @@ ___
 <img title="Allure Graphics" src="images/screen/graphs.png" width="850">  
 </p>
 
-___
-<a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2197/dashboards">Allure TestOps</a>
-____
-### *Allure TestOps Dashboard*
-
-<p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screen/allure_overview.png" width="850">  
-</p>  
-
-### *Ручные тест-кейсы*
-
-<p align="center">  
-<img title="Allure Tests" src="images/screen/manual_tests.png" width="850">  
-</p>
-
-### *Авто тест-кейсы*
-
-<p align="center">  
-<img title="Allure TestOps Tests" src="images/screen/allure_autotestsN.png" width="850">  
-</p>
-
-___
-<a id="jira"></a>
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-682">Jira</a>
-____
-<p align="center">  
-<img title="Jira" src="images/screen/jira.png" width="850">  
-</p>
-
 ____
 <a id="telegram"></a>
 ## <img alt="Allure" height="25" src="images/logo/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
