@@ -2,9 +2,13 @@ package pages;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+
 
 public class MainPage {
     private SelenideElement
@@ -25,9 +29,12 @@ public class MainPage {
     }
 
     public MainPage setСatalogFilter(String value) {
-        catalogFilter.scrollTo();
+        /*catalogFilter.scrollTo();
         catalogFilter.$(byText(value)).scrollIntoView(true);
-        catalogFilter.$(byText(value)).click();
+        catalogFilter.$(byText(value)).click();*/
+        WebDriver driver = getWebDriver();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();",
+                catalogFilter.$(byText(value)));
 
         return this;
     }
