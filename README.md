@@ -29,7 +29,7 @@ ____
 <a href="https://github.com/"><img src="images/logo/Github.svg" width="50" height="50"  alt="Github"/></a>  
 <a href="https://junit.org/junit5/"><img src="images/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>  
 <a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>  
-<a href="https://selenide.org/"><img src="images/logo/logo_selenide.png" width="50" height="50"  alt="Selenide"/></a>  
+<a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>  
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>  
 <a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a> 
 <a href="https://qameta.io/"><img src="images/logo/Allure2.svg" width="50" height="50"  alt="Allure TestOps"/></a>   
@@ -61,7 +61,6 @@ ____
 - *browser (браузер, по умолчанию chrome)*
 - *browserVersion (версия браузера, по умолчанию 100.0)*
 - *browserSize (размер окна браузера, по умолчанию 1920x1080)*
-- *environment (тестовая среда для прохождения автотестов)*
 
 <a id="console"></a>
 ## Команды для запуска из терминала
