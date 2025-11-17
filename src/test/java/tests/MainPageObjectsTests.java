@@ -1,6 +1,5 @@
 package tests;
 
-import jdk.jfr.Description;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -9,8 +8,6 @@ import pages.components.CheckComponent;
 import pages.MainPage;
 import testData.TestData;
 import helpers.AttachForAllure;
-
-import static io.qameta.allure.Allure.step;
 
 public class MainPageObjectsTests extends TestBase {
 
@@ -24,96 +21,53 @@ public class MainPageObjectsTests extends TestBase {
         AttachForAllure.pageSource();
         AttachForAllure.browserConsoleLogs();
         AttachForAllure.addVideo();
-
     }
 
     @Test
     @DisplayName("Проверка отображения главной страницы сайта")
     @Tag("MainPageTests")
     void positiveMainPageIsVisible() {
-        step("Открыть страницу сайта МКБ Инвестиции", () -> {
-            mainPage.openPage();
-        });
-
-        step("Проверить корректное отображение страницы и основого загловка", () -> {
-            checkComponent.checkMainPageIsOpen();
-        });
+        mainPage.openPage();
+        checkComponent.checkMainPageIsOpen();
     }
 
     @Test
     @DisplayName("Проверка отображения карточек продуктов при выборе чек-бокса")
     @Tag("MainPageTests")
-    void CheckBoxMainPageAndProductCardIsVisible() {
-        step("Открыть страницу сайта МКБ Инвестиции", () -> {
-            mainPage.openPage();
-        });
-        step("Проскролить до блока с выбором и выбрать значение", () -> {
-            mainPage.setСatalogFilter(testData.catalogFilterOption);
-        });
-
-        step("Проверить корректное отображение карточки продукта", () -> {
-            checkComponent.checkProductCardWithSelection();
-        });
-
+    void checkBoxMainPageAndProductCardIsVisible() {
+        mainPage.openPage();
+        mainPage.setСatalogFilter(testData.catalogFilterOption);
+        checkComponent.checkProductCardWithSelection();
     }
 
     @Test
     @DisplayName("Проверка невозможности отправки формы с некорректным номером телефона")
     @Tag("MainPageTests")
-    void NegativeTestWithConnectionFormOnMainPage() {
-        step("Открыть страницу сайта МКБ Инвестиции", () -> {
-            mainPage.openPage();
-        });
-        step("Проскролить до формы связи и ввести некорректный номер телефона", () -> {
-            mainPage.setPhone(testData.userNumber);
-        });
-        step("Нажать на кнопку 'Связаться'", () -> {
-            mainPage.submitConnect();
-        });
-
-        step("Проверить отображение текста ошибки о некорректности номера телефона", () -> {
-            checkComponent.checkConnectionFormError();
-        });
-
+    void negativeTestWithConnectionFormOnMainPage() {
+        mainPage.openPage();
+        mainPage.setPhone(testData.userNumber);
+        mainPage.submitConnect();
+        checkComponent.checkConnectionFormError();
     }
 
     @Test
     @DisplayName("Проверка невозможности отправки формы с некорректным email")
     @Tag("MainPageTests")
-    void NegativeTestWithSubscribeFormOnMainPage() {
-        step("Открыть страницу сайта МКБ Инвестиции", () -> {
-            mainPage.openPage();
-        });
-        step("Проскролить до формы подписки и ввести некорректный email", () -> {
-            mainPage.setEmail(testData.email);
-        });
-        step("Выбрать раздел для рассылки", () -> {
-            mainPage.setCheckBoxForMailing(testData.checkBoxMailing);
-        });
-        step("Нажать кнопку 'Подписаться на рассылку'", () -> {
-            mainPage.submitEmail();
-        });
-
-        step("Проверить отображение текста ошибки о некорректности email", () -> {
-            checkComponent.checkSubscribeFormError();
-        });
-
+    void negativeTestWithSubscribeFormOnMainPage() {
+        mainPage.openPage();
+        mainPage.setEmail(testData.email);
+        mainPage.setCheckBoxForMailing(testData.checkBoxMailing);
+        mainPage.submitEmail();
+        checkComponent.checkSubscribeFormError();
     }
 
     @Test
     @DisplayName("Проверка содержания обязательной информации в футере сайта")
     @Tag("MainPageTests")
-    void PositiveFutterTestWithReqInfo() {
-        step("Открыть страницу сайта МКБ Инвестиции", () -> {
-            mainPage.openPage();
-        });
-        step("Проскролить до футера, элемента раскрытия", () -> {
-            mainPage.getRequiredInfoDropDown();
-        });
-
-        step("Проверить содержимое обязательной информации", () -> {
-            checkComponent.checkReqInfoInFutter();
-        });
-
+    void positiveFutterTestWithReqInfo() {
+        mainPage.openPage();
+        mainPage.getRequiredInfoDropDown();
+        checkComponent.checkReqInfoInFutter();
     }
+
 }
