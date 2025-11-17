@@ -81,7 +81,6 @@ public class MainPage {
     public MainPage getRequiredInfoDropDown() {
         requiredInfoDropDown.scrollTo();
         executeJavaScript("arguments[0].click()", requiredInfoDropDown);
-        requiredInfoDropDown.click();
         return this;
     }
 
